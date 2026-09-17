@@ -1,13 +1,130 @@
-#forms-box{
-    background-color: antiquewhite;
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'Poppins', sans-serif;
+    background: #f3f4f6;
 }
 
-#nome{
-    font-size: 30px;
+.container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30px;
 }
-#comentario{
-    font-size: 30px;
+
+#forms-box,
+#tabela {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+}
+
+#forms-box {
+    width: 420px;
+}
+
+#tabela {
+    width: 420px;
+}
+#forms-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#forms-box h1 {
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 2rem;
+    color: #222;
+}
+
+#nomeAvaliacao,
+#comentarioAvaliacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f7f7f7;
+    border: 1px solid #e1e1e1;
+    border-radius: 12px;
+    padding: 0 12px;
+}
+
+#nomeAvaliacao i,
+#comentarioAvaliacao i {
+    font-size: 22px;
+    color: #666;
+}
+
+input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 14px 0;
+    font-size: 15px;
+    outline: none;
+    color: #333;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+#estrelasAvaliacao {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-size: 34px;
+    cursor: pointer;
+    user-select: none;
+    padding: 6px 0;
+}
+
+.star {
+    color: #d1d5db;
+    transition: 0.2s ease;
+}
+
+.star.active,
+.star.selected {
+    color: #f4b400;
+}
+
+.btn-publish {
+    background:greenyellow;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-publish:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.25);
+}
+
+#tabela {
+    margin-top: 30px;
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 i{
@@ -17,10 +134,13 @@ i{
   font-size: 40px;
   cursor: pointer;
   color: #ccc;
+  position: relative;
+  left: 25%;
+  right: 25%;
 }
 
 .star.active,
-.star:hover,
+.star:hover,                                                    
 .star:hover ~ .star {
     color: #ccc;
 }
@@ -28,9 +148,5 @@ i{
 .star.selected {
   color: #f39c12;
   outline: black;
-}
-
-#body{
-    font-family: 'Poppins', sans-serif;
 }
 
