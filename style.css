@@ -1,0 +1,36 @@
+#forms-box{
+    background-color: antiquewhite;
+    font-family: 'Poppins', sans-serif;
+}
+
+#nome{
+    font-size: 30px;
+}
+#comentario{
+    font-size: 30px;
+}
+
+i{
+    font-size: 35px;
+}
+#estrelas {
+  font-size: 40px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.star.active,
+.star:hover,
+.star:hover ~ .star {
+    color: #ccc;
+}
+
+.star.selected {
+  color: #f39c12;
+  outline: black;
+}
+
+#body{
+    font-family: 'Poppins', sans-serif;
+}
+
