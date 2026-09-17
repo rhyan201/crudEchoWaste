@@ -2,10 +2,14 @@ body {
     margin: 0;
     min-height: 100vh;
     display: flex;
+    flex-direction: row;
+    gap: 40px;
     justify-content: center;
     align-items: center;
     font-family: 'Poppins', sans-serif;
     background: #f3f4f6;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 .container {
@@ -32,6 +36,13 @@ body {
 
 #tabela {
     width: 420px;
+    margin-top: 0;
+}
+
+@media (max-width: 980px) {
+    body {
+        flex-direction: column;
+    }
 }
 #forms-box form {
     display: flex;
