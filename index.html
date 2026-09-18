@@ -23,27 +23,32 @@
                     <span class="star" data-value="4">&#9734;</span>
                     <span class="star" data-value="5">&#9734;</span>
                 </div>
+                 <div id="idPedidoAvaliacao">
+                    <i class="bx bx-cart"></i>
+                    <input type="text" inputmode="numeric" pattern="[0-9]*" name="idPedido" id="idPedido" placeholder="Digite o Id do seu pedido">
+                </div>
                 <div id="nomeAvaliacao">
                     <i class="bx bx-user"></i>
-                    <input type="text" name="nome" id="nome" placeholder="Digite o seu nome:">
+                    <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
                 </div>
                 <div id="comentarioAvaliacao">
                     <i class="bx bx-message"></i>
-                    <input type="text" name="comentario" id="comentario" placeholder="Adicione um comentário a sua avaliação:">
+                    <textarea name="comentario" id="comentario" rows="3" placeholder="Adicione um comentário a sua avaliação"></textarea>
                 </div>
                 <button type="submit" class="btn-publish" >Publicar</button>
         </form>
     </div>
 
     <!-- Tabela contendo as avaliações -->
-    <div id="tabela">
-        <table>
+    <div id="tabelaDados">
+        <table id="tabela">
             <thead>
+                <th>Id do Pedido</th>
                 <th>Nome</th>
                 <th>Avaliação</th>
                 <th>Comentário</th>
             </thead>
-            <tbody>
+            <tbody id="bodyTabela">
 
             </tbody>
         </table>
