@@ -4,12 +4,13 @@ body {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     font-family: 'Poppins', sans-serif;
     background: #f3f4f6;
     padding: 30px;
     box-sizing: border-box;
+    padding-left: 60px;
 }
 
 .container {
@@ -21,6 +22,8 @@ body {
     width: 100%;
     padding: 30px;
 }
+
+
 #idPedidoAvaliacao{
     overflow:hidden
 }
@@ -40,7 +43,7 @@ body {
 }
 
 #tabelaDados {
-    width: min(100%, 760px);
+    width: min(100%, 890px);
     min-width: 0;
     height: auto;
 }
@@ -57,9 +60,6 @@ body {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06); 
     min-height: 400px; 
 }
-
-
-
 
 #tabela th,
 #tabela td {
@@ -140,9 +140,12 @@ table{
     #tabela th:nth-child(3),
     #tabela td:nth-child(3),
     #tabela th:nth-child(4),
-    #tabela td:nth-child(4) {
-        width: auto;
-    }
+    #tabela td:nth-child(4) 
+    #tabela th:nth-child(5),
+    #tabela td:nth-child(5) {
+    width: 130px;
+    min-width: 0;
+}
 }
 #forms-box form {
     display: flex;
@@ -306,6 +309,8 @@ i{
 #bodyTabela {
     display: block;
     overflow-y: auto;    
+    max-height: 100%;
+    scrollbar-gutter: stable;
 }
 
 #bodyTabela tr {

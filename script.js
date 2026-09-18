@@ -64,6 +64,7 @@ function listar() {
     tbody.appendChild(tr);
   });
 }
+  
 
 
   /* Sistema de estrelas */
