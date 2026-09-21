@@ -20,9 +20,14 @@ function listar(){
     let indice = 0; //contador de posição do array
 
     for(let categoria of lista){ //laço for of para percorrer a lista de categorias
-        document.getElementById("p_categorias").innerHTML += `<li>
-        ${categoria.nome}<button onclick="excluir(${indice})">Excluir</button>
-        <button onclick="carregar(${indice})">Carregar</button>`; //injeta a categoria na tela com os botões excluir e carregar usando o índice do array
+        document.getElementById("p_categorias").innerHTML += `
+        <li>
+            <span class="categoria-nome">${categoria.nome}</span>
+            <div class="categoria-acoes">
+                <button onclick="excluir(${indice})">Excluir</button>
+                <button onclick="carregar(${indice})">Carregar</button>
+            </div>
+        </li>`; //injeta a categoria na tela com os botões excluir e carregar usando o índice do array
         indice++; //soma 1 ao índice para a próxima categoria
     }
 

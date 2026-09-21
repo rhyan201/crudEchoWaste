@@ -1,29 +1,210 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Document</title>
-    <head>
-        <meta charset="UTF-8">
-        <title>EcoWaste - Categorias</title>
-    </head>
-    <body>
+    <title>EcoWaste - Categorias</title>
+    <style>
+        :root {
+            --verde-escuro: #1e5d3a;
+            --verde-medio: #468b5d;
+            --verde-claro: #dff5e6;
+            --bege-claro: #f6efe5;
+            --text-primary: #1f3329;
+            --text-soft: #4a6759;
+            --branco: #ffffff;
+            --sombra: rgba(30, 93, 58, 0.13);
+            --cinza-borda: #dfeae1;
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body {
+            margin: 0;
+            min-height: 100%;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background:
+                radial-gradient(circle at top left, rgba(143, 209, 141, 0.22), transparent 25%),
+                radial-gradient(circle at bottom right, rgba(219, 191, 145, 0.18), transparent 30%),
+                linear-gradient(135deg, #f9f7f1 0%, #f3f9f2 32%, #ecf8ef 100%);
+            color: var(--text-primary);
+        }
+
+        .container-categoria {
+            width: min(760px, 100%);
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid rgba(30, 93, 58, 0.08);
+            border-radius: 28px;
+            box-shadow: 0 20px 50px var(--sombra);
+            padding: 28px 24px;
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            text-align: center;
+            color: var(--verde-escuro);
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-weight: 700;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        input, button {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        input {
+            width: 100%;
+            margin-top: 6px;
+            border: 1.5px solid var(--cinza-borda);
+            border-radius: 14px;
+            padding: 12px 14px;
+            background: #f9fffa;
+            color: var(--text-primary);
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input:focus {
+            border-color: rgba(30, 93, 58, 0.7);
+            box-shadow: 0 0 0 4px rgba(70, 139, 93, 0.08);
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            max-width: 240px;
+            margin: 22px auto 0;
+            border: none;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-escuro));
+            color: var(--branco);
+            padding: 13px 18px;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 12px 22px rgba(30, 93, 58, 0.18);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 16px 26px rgba(30, 93, 58, 0.2);
+        }
+
+        #alterar {
+            margin-top: 8px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 28px 0 0;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            min-height: 66px;
+            padding: 16px 18px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, var(--bege-claro), #dff5e6);
+            border: 1px solid rgba(30, 93, 58, 0.08);
+            color: var(--text-primary);
+            font-weight: 600;
+            text-align: left;
+            box-shadow: 0 10px 18px rgba(30, 93, 58, 0.08);
+        }
+
+        .categoria-nome {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .categoria-acoes {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-left: 12px;
+        }
+
+        .categoria-acoes button {
+            margin: 0;
+            max-width: 110px;
+            padding: 10px 12px;
+            font-size: 0.9rem;
+        }
+
+        .btn-voltar {
+            display: block;
+            width: 100%;
+            max-width: 240px;
+            margin: 16px auto 0;
+            padding: 13px 18px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f6efe5, #dff5e6);
+            color: var(--verde-escuro);
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid rgba(30, 93, 58, 0.12);
+            box-shadow: 0 10px 18px rgba(30, 93, 58, 0.08);
+        }
+
+        @media (max-width: 600px) {
+            .container-categoria { padding: 22px 18px; }
+            ul { grid-template-columns: 1fr; }
+            button, .btn-voltar { max-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-categoria">
         <h1>Categorias de Produtos</h1>
 
         <form id="cadcat">
             <label for="nome">Nome da categoria:</label>
-            <input type="text" id="nome"><br>
+            <input type="text" id="nome" placeholder="Digite o nome da categoria">
         </form>
 
         <div id="alterar"></div>
 
         <button id="bt_enviar">Enviar</button>
+        <a href="../index.html" class="btn-voltar">Voltar para o início</a>
 
-        <ul id="p_categorias"></ul> <!-- lista de categorias cadastradas -->
+        <ul id="p_categorias"></ul>
+    </div>
 
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
-
-!

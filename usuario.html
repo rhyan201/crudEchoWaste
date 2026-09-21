@@ -13,11 +13,21 @@
 <body>
     <div class="opcoesUser">
         <h2>Painel do Usuário</h2>
-        <ul><a href="CRUD4/pedidosReservas.html">Realizar Reserva</a></ul>
-        <ul><a href="crud5/cadastroAvaliacao.html">Avaliar Pedido</a></ul>
-        <ul><a href="#">Visualizar Produtos</a></ul> <!-- Página não existente, apenas para preencher o menu de usuário -->
-        <ul><a href="#">Lojas por perto</a></ul>     <!-- Página não existente, apenas para preencher o menu de usuário -->
-        <ul><a href="#">Últimos pedidos</a></ul>     <!-- Página não existente, apenas para preencher o menu de usuário -->
+        <ul>
+            <li><a href="CRUD4/pedidosReservas.html">Realizar Reserva</a></li>
+            <li><a href="crud5/cadastroAvaliacao.html">Avaliar Pedido</a></li>
+            <li><a href="#">Visualizar Produtos</a></li>
+            <li><a href="#">Lojas por perto</a></li>
+            <li><a href="#">Últimos pedidos</a></li>
+        </ul>
     </div>
+    <script>
+        document.querySelectorAll('a[href="#"]').forEach((link) => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                alert('Esta página está em desenvolvimento.');
+            });
+        });
+    </script>
 </body>
 </html>

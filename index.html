@@ -2,74 +2,24 @@
 <html lang="pt_BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Document</title>
-</head>
-<body>
-
-    <!-- Formulário de avaliação -->
-    <div id="forms-box">
-        <form action="">
-            <h1>Formulário</h1>
-                <div id="estrelas">
-                    <span class="star" data-value="1">&#9734;</span>
-                    <span class="star" data-value="2">&#9734;</span>
-                    <span class="star" data-value="3">&#9734;</span>
-                    <span class="star" data-value="4">&#9734;</span>
-                    <span class="star" data-value="5">&#9734;</span>
-                </div>
-                 <div id="idPedidoAvaliacao">
-                    <i class="bx bx-cart"></i>
-                    <input type="text" inputmode="numeric" pattern="[0-9]*" name="idPedido" id="idPedido" placeholder="Digite o Id do seu pedido">
-                </div>
-                <div id="nomeAvaliacao">
-                    <i class="bx bx-user"></i>
-                    <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
-                </div>
-                <div id="comentarioAvaliacao">
-                    <i class="bx bx-message"></i>
-                    <textarea name="comentario" id="comentario" rows="3" placeholder="Adicione um comentário a sua avaliação"></textarea>
-                </div>
-                <button type="submit" class="btn-publish" >Publicar</button>
-        </form>
-    </div>
-
-    <!-- Tabela contendo as avaliações -->
-    <div id="tabelaDados">
-        <table id="tabela">
-            <thead>
-                <th>Id do Pedido</th>
-                <th>Nome</th>
-                <th>Avaliação</th>
-                <th>Comentário</th>
-            </thead>
-            <tbody id="bodyTabela">
-                    
-            </tbody>
-        </table>
-    </div>
-</body>
-<script src="script.js">
-</script> 
-=======
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel de controle</title>
 </head>
 <body>
-    <div class="opcoes-admin">    
-        <li>
-            <ul><a href="index.html">Início</a></ul>
-            <ul><a href="crud3/cadastroProduto.html">Cadastro de Produtos</a></ul>
-            <ul><a href="CRUD2/cadastroUsuario.html">Cadastro de Usuário</a></ul>
-            <ul><a href="crud/categoriaProduto.html"></a>Categoria de Produtos</ul>
-            <ul><a href="usuario.html">Visualizar tela de Usuário</a></ul>
-        </li>
+    <div class="opcoes-admin">
+        <h1>Painel Administrativo</h1>
+        <p>Escolha uma opção para continuar com a gestão saudável.</p>
+
+        <ul>
+            <li><a href="crud3/cadastroProduto.html">Cadastro de Produtos</a></li>
+            <li><a href="CRUD2/cadastroUsuario.html">Cadastro de Usuário</a></li>
+            <li><a href="crud/categoriaProduto.html">Categoria de Produtos</a></li>
+            <li><a href="usuario.html">Visualizar tela de Usuário</a></li>
+        </ul>
     </div>
 </body>
->>>>>>> 65514a9 (Adição de CRUDS de outros participantes do projeto - Tela de admin / usuário)
 </html>

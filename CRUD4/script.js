@@ -43,9 +43,9 @@ function criarReserva() {
 
         id: Date.now(),
 
-        cdg: gerarCdg(),
+        codigo: gerarCdg(),
 
-        client: client,
+        cliente: client,
 
         item: item,
 
@@ -131,7 +131,7 @@ function attTabela() {
 
                 <button
                     class="botao botao-cancelar"
-                    onclick="cancelarReserva(${rsv.id})"
+                    onclick="cancelarRsrv(${rsv.id})"
                 >
                     Cancelar
                 </button>
@@ -146,12 +146,12 @@ function attTabela() {
 
                 <td>
                     <span class="codigo">
-                        ${rsv.codigo}
+                        ${rsv.codigo || rsv.cdg}
                     </span>
                 </td>
 
                 <td>
-                    ${rsv.cliente}
+                    ${rsv.cliente || rsv.client}
                 </td>
 
                 <td>
@@ -211,7 +211,7 @@ function concluirReserva(id) {
 
     if (
         codigoDigitado.trim().toUpperCase()
-        !== rsrv.codigo
+        !== (rsrv.codigo || rsrv.cdg)
     ) {
 
         alert("Código de resgate inválido.");
@@ -283,6 +283,10 @@ function mostrarMSG(texto) {
 
     const mensagem =
         document.getElementById("mensagem");
+
+    if (!mensagem) {
+        return;
+    }
 
     mensagem.textContent = texto;
 

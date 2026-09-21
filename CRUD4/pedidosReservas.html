@@ -5,6 +5,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoWaste - Pedidos / Reservas</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+            :root {
+                --verde-escuro: #1e5d3a;
+                --verde-medio: #468b5d;
+                --verde-claro: #dff5e6;
+                --bege-claro: #f6efe5;
+                --texto: #1f3329;
+                --branco: #ffffff;
+                --borda: #dfeae1;
+                --sombra: rgba(30, 93, 58, 0.13);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                min-height: 100%;
+            }
+
+            body {
+                min-height: 100vh;
+                max-width: 1100px;
+                margin: 0 auto;
+                padding: 44px 24px 56px;
+                font-family: 'Poppins', sans-serif;
+                color: var(--texto);
+                background:
+                    radial-gradient(circle at top left, rgba(143, 209, 141, 0.22), transparent 25%),
+                    radial-gradient(circle at bottom right, rgba(219, 191, 145, 0.18), transparent 30%),
+                    linear-gradient(135deg, #f9f7f1 0%, #f3f9f2 32%, #ecf8ef 100%);
+            }
+
+            h1,
+            h2,
+            p {
+                margin-top: 0;
+            }
+
+            h1 {
+                margin-bottom: 10px;
+                color: var(--verde-escuro);
+                font-size: clamp(2rem, 4vw, 3rem);
+                text-align: center;
+            }
+
+            .desc {
+                max-width: 650px;
+                margin: 0 auto 36px;
+                color: #587061;
+                text-align: center;
+            }
+
+            h2 {
+                margin-bottom: 18px;
+                color: var(--verde-escuro);
+                font-size: 1.35rem;
+            }
+
+            label {
+                display: block;
+                margin: 16px 0 8px;
+                font-weight: 600;
+            }
+
+            input,
+            select {
+                display: block;
+                width: min(620px, 100%);
+                padding: 13px 14px;
+                border: 1.5px solid var(--borda);
+                border-radius: 14px;
+                outline: none;
+                background: rgba(255, 255, 255, 0.86);
+                color: var(--texto);
+                font: inherit;
+                transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            input:focus,
+            select:focus {
+                border-color: rgba(30, 93, 58, 0.7);
+                box-shadow: 0 0 0 4px rgba(70, 139, 93, 0.1);
+            }
+
+            button {
+                margin-top: 22px;
+                padding: 13px 20px;
+                border: 0;
+                border-radius: 14px;
+                background: linear-gradient(135deg, var(--verde-medio), var(--verde-escuro));
+                color: var(--branco);
+                font: 700 0.95rem 'Poppins', sans-serif;
+                cursor: pointer;
+                box-shadow: 0 12px 22px rgba(30, 93, 58, 0.18);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+
+            button:hover {
+                transform: translateY(-1px);
+                box-shadow: 0 16px 26px rgba(30, 93, 58, 0.2);
+            }
+
+            h2:nth-of-type(2) {
+                margin-top: 48px;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: separate;
+                border-spacing: 0;
+                overflow: hidden;
+                border: 1px solid rgba(30, 93, 58, 0.08);
+                border-radius: 18px;
+                background: rgba(255, 255, 255, 0.78);
+                box-shadow: 0 20px 50px var(--sombra);
+            }
+
+            th,
+            td {
+                padding: 15px 16px;
+                border-bottom: 1px solid var(--borda);
+                text-align: left;
+            }
+
+            th {
+                background: var(--verde-escuro);
+                color: var(--branco);
+                font-size: 0.9rem;
+                font-weight: 600;
+            }
+
+            td {
+                background: rgba(255, 255, 255, 0.58);
+                font-size: 0.9rem;
+            }
+
+            tr:last-child td {
+                border-bottom: 0;
+            }
+
+            td button {
+                margin: 0 8px 0 0;
+                padding: 9px 12px;
+                border-radius: 10px;
+                font-size: 0.82rem;
+            }
+
+            @media (max-width: 700px) {
+                body {
+                    padding: 30px 16px 40px;
+                }
+
+                table {
+                    display: block;
+                    overflow-x: auto;
+                    white-space: nowrap;
+                }
+
+                th,
+                td {
+                    padding: 12px;
+                }
+            }
+        </style>
 
 </head>
 
