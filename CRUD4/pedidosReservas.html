@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoWaste - Pedidos / Reservas</title>
+
+</head>
+
+<body>
+
+    <h1>Pedidos / Reservas</h1>
+
+    <p class="desc">
+        Registre e acompanhe os resgates das ofertas realizados pelos clientes.
+    </p>
+
+    <h2>Nova Reserva</h2>
+
+
+    <label for="cliente">Nome do cliente</label>
+
+    <input type="text" id="cliente" placeholder="Digite o nome do cliente">
+
+    <label for="item">Oferta / Item</label>
+
+    <select id="item">
+
+        <option value="">
+            Selecione uma oferta
+        </option>
+
+        <option value="Maçã">
+            Maçã
+        </option>
+
+        <option value="Banana">
+            Banana
+        </option>
+
+        <option value="Laranja">
+            Laranja
+        </option>
+
+        <option value="Cenoura">
+            Cenoura
+        </option>
+
+        <option value="Tomate">
+            Tomate
+        </option>
+
+    </select>
+
+
+
+
+    <button onclick="criarReserva()">
+        Criar Reserva
+    </button>
+
+
+    <h2>Histórico de Pedidos / Reservas</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>Código</th>
+                <th>Cliente</th>
+                <th>Oferta</th>
+                <th>Data</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+
+        </thead>
+
+        <tbody id="listaReservas">
+        </tbody>
+
+    </table>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
