@@ -60,7 +60,7 @@ function alterar(indice){
     lista[indice].preconormal = document.getElementById("preconormal").value;
     lista[indice].precopromo = document.getElementById("precopromo").value;
     lista[indice].horario = document.getElementById("horario").value;
-    localStorage.setItem("produtos", JSON.stringify(lista));
+    localStorage.setItem("produtos", JSON.stringify(lista)); 
     listar(); //chama a função listar para atualizar a lista na tela
 }
 
